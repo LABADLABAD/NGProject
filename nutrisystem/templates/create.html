@@ -1,0 +1,32 @@
+{% extends 'nav.html' %}
+{% block title %}Form{% endblock %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+  <div class="card card-body" style="background-color:#6B8E23;">
+    {% for x in form %}
+    <p class="text-white">{{x.label}}</p>
+    {{x}} <br>
+    {% endfor %}
+    <input type="submit" name="submit" style="background-color:#9ACD32;" value="Submit">
+  </div>
+  {% csrf_token %}
+</form>
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

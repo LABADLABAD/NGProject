@@ -1,0 +1,213 @@
+{% extends 'nav.html' %}
+{% block content %}
+<form method="POST" action="{% url 'mainpage/' %}">
+{% csrf_token%}
+	<body style = "background-color: yellowgreen;">
+		<center>
+			<h1  style= "color: black;"
+                 style= "padding: 20px;"> <center> NutriGeek </center> </h1>
+		<fieldset style="color: black";>
+			<legend> <b> We Recommend, You Eat </b></legend>
+			<br>
+			<label>Full Name:</label>
+				<input 
+					type="text" 
+					id="fname" 
+					name="fullname" 
+					placeholder="Enter your full name here."required>
+				</input>
+				<br> <br>
+
+			<label>Sex:</label>
+				<input 
+                    type="radio"
+                    id="gender" 
+                    name="sex"
+                    value="Male"> Male 
+                </input>
+                <input 
+                    type="radio"
+                    id="gender1" 
+                    name="sex"
+                    value="Female"> Female 
+                </input>
+				<br> <br>
+
+			<label>Age:</label>
+				<input 
+                    type="text" 
+					id="age1" 
+					name="age" 
+					placeholder="Enter your age here."required>
+                </input>
+				<br> <br>
+
+			<label>Email:</label>
+				<input 
+                    type="text" 
+					id="EAdd" 
+					name="email" 
+					placeholder="name@gmail.com"required>
+                </input>
+				<br> <br>
+
+			<label>Height (in cm):</label>
+				<input 
+                    type="text" 
+					id="EHeight" 
+					name="height" 
+					placeholder="in centimeters"required>
+                </input>
+				<br> <br>
+			<label>Weight (in kg):</label>
+				<input 
+                    type="text" 
+					id="EWeight" 
+					name="weight" 
+					placeholder="in kilograms"required>
+                </input>
+				<br> <br>
+
+			<label>Food Allergens:</label>
+			<br> <br>
+				<input 
+                    type="checkbox"
+                    id="Allergen1" 
+                    name="foodallergens"
+                    value="Eggs"> Eggs
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen2" 
+                    name="foodallergens"
+                    value="Milk"> Milk
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen3" 
+                    name="foodallergens"
+                    value="Fish"> Fish
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen4" 
+                    name="foodallergens"
+                    value="Shellfish"> Shellfish 
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen5" 
+                    name="foodallergens"
+                    value="Peanuts"> Peanuts 
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen6" 
+                    name="foodallergens"
+                    value="Tree nuts"> Tree nuts 
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen7" 
+                    name="foodallergens"
+                    value="Soy"> Soy
+                </input>
+				<br>
+
+				<input 
+                    type="checkbox"
+                    id="Allergen8" 
+                    name="foodallergens"
+                    value="Wheat"> Wheat
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen9" 
+                    name="foodallergens"
+                    value="Mustard"> Mustard
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen10" 
+                    name="foodallergens"
+                    value="Sesame and Other seeds"> Sesame and Other seeds
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen11" 
+                    name="foodallergens"
+                    value="Gluten"> Gluten
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen12" 
+                    name="foodallergens"
+                    value="Celery"> Celery
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen13" 
+                    name="foodallergens"
+                    value="Sulphites"> Sulphites
+                </input>
+
+                <input 
+                    type="checkbox"
+                    id="Allergen14" 
+                    name="foodallergens"
+                    value="Aspirin and Salicylates "> Aspirin and Salicylates 
+                </input>
+<br> <br>
+				<button type="submit" id="btnkath" name="btnkath">Submit</button>
+
+					
+	 </center>
+		</fieldset>
+
+		<table id="recotable"/>
+
+			<tr style="text-align: center;">
+	    		<th width="300">Full Name</th>
+	    		<th>Sex</th>
+	    		<th>Age</th>
+	    		<th>E-mail</th>
+	    		<th>Height</th>
+	    		<th>Weight</th>
+	    		<th>Food Allergens</th>
+		
+	  		</tr>
+	  		{% for reco in registered_Info %}
+	  		<tr style="text-align: center;">
+				<td width="300">{{forloop.counter}}: {{reco.fullname}}</td>
+				<td>{{reco.sex}}</td>
+				<td>{{reco.age}} </td>
+				<td>{{reco.email}}</td>				
+				<td>{{reco.height}}</td>
+				<td>{{reco.weight}}</td>
+				<td>{{reco.foodallergens}}</td>
+				
+	
+			</tr>
+			{% endfor %}
+
+		<!-- <table id="recotable">
+		{% for item in mp%}
+		<tr>
+			<td> {{forloop.counter}}: {{item.fullname}}, {{item.sex}}, {{item.age}} years old, {{item.email}}, {{item.height}}cm, {{item.weight}}kg, {{item.foodallergens}}, </td>
+		</tr>
+
+		{% endfor %} -->
+		</form>
+		
+{% endblock %}

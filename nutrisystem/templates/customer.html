@@ -1,0 +1,39 @@
+{% extends 'nav.html' %}
+{% block title %} Customers {% endblock %}
+
+{% block content %}
+
+  <h1>Customers</h1>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Gende</th>
+      <th scope="col">Age</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Food Allergens</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for x in customer %}
+    <tr>
+      <td>{{x.fullname}}</td>
+      <td>{{x.gender}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.email}}</td>
+      <td>{{x.address}}</td>
+      <td>{{x.contact}}</td>
+      <td>{{x.foodallergens}}</td>
+      <td><a href="{% url 'update-customer' x.id %}" class="btn btn-primary btn-sm" style="background-color:#9ACD32; border:0px;">Update</a></td>
+      <td><a href="{% url 'delete-customer' x.id %}" class="btn btn-primary btn-sm" style = "background-color:#b84a62; border:0px;">Delete</a></td>
+    </tr>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> 
+<a href="{% url 'add-customer' %}" class="btn btn-primary" style="background-color:#9ACD32; border:0px;">New Customer</a>
+
+{% endblock %}

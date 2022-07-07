@@ -1,0 +1,37 @@
+{% extends 'nav.html' %}
+{% block title %} Payment  {% endblock %}
+{% block content %}
+  <h1>Payments</h1>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Customer</th>
+      <th scope="col">Date</th>
+      <th scope="col">Payment_Type</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for x in payment %}
+    <tr>
+      <td>{{x.Customer_Payment}}</td>
+      <td>{{x.Payment_Date}}</td>
+      <td>{{x.Payment_Type}}</td>
+      <td>{{x.Payment_Amount}}</td>
+      {% if x.Payment_Category == 'Nutrigeek Juice' %}
+      <td> 350 </td>
+      {% elif x.Payment_Category == 'Nutrigeek Coffee' %}
+      <td> 200 </td>
+      {% elif x.Payment_Category == 'Nutrigeek Vitamins' %}
+      <td> 250 </td>
+      {% endif %}
+      <td><a href="{% url 'update-payment' x.id %}" class="btn btn-primary btn-sm" style="background-color:#9ACD32; border:0px;">Update</a></td>
+      <td><a href="{% url 'delete-payment' x.id %}" class="btn btn-primary btn-sm" style = "background-color:#b84a62; border:0px;">Delete</a></td>
+    </tr>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> 
+<a href="{% url 'payment' %}" class="btn btn-primary" style="background-color:#9ACD32; border:0px;">Pay now</a>
+{% endblock %}

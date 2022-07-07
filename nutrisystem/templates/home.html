@@ -1,0 +1,13 @@
+{% extends 'nav.html' %}
+{% block title %} Home  {% endblock %}
+{% block content %}
+  <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t1.15752-9/290172849_461561512638266_912887771166834776_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEelQHyFgoPD-QG2_39kEY3uC4O-thFapm4Lg762EVqmW4ZeMpd2mO36Yr0P1dO3mhooyBUoyRdlI20tLTVZNAv&_nc_ohc=lDGi4KoJO5sAX_Y-u72&tn=SPG_KRL_pzhQf8Ph&_nc_ht=scontent.fmnl17-5.fna&oh=03_AVKPpl-ZK0x1pgLG8QJf9hPwIqC2miuUPpC2-zCMl-Nkvg&oe=62ECBB0F" class="img-fluid w-25 p-3">
+  <h1>Healthy Food, Healthy Life</h1>
+  <p>Nutrition is the study of nutrients in our food.</p>
+  <p>Know more about nutrition, its uses, functions, facts and definition</p>
+
+<a href="{% url 'view-order' %}" class="link-primary">Orders.</a>
+<a href="{% url 'view-payment' %}" class="link-success">Payments.</a>
+<a href="{% url 'view-delivery' %}" class="link-dark">Deliveries.</a>
+				
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'nav.html' %}
+{% block title %}Order{% endblock %}
+{% block content %}
+  <h1>Orders</h1>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Customer</th>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for x in order %}
+    <tr>
+      <td>{{x.Customer_Reference}}</td>
+      <td>{{x.Product_Reference}}</td>
+      <td>{{x.Order_Quantity}}</td>
+      <td>{{x.Order_Date}}</td>
+
+      <td><a href="{% url 'update-order' x.id %}" class="btn btn-primary btn-sm" style="background-color:#9ACD32; border:0px;">Update</a></td>
+      <td><a href="{% url 'delete-order' x.id %}" class="btn btn-primary btn-sm" style = "background-color:#b84a62; border:0px;">Delete</a></td>
+    </tr>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> 
+<a href="{% url 'order' %}" class="btn btn-primary" style="background-color:#9ACD32; border:0px;">Order</a>
+{% endblock %}

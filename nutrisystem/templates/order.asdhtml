@@ -1,0 +1,191 @@
+{% extends 'nav.html' %}
+{% block content %}
+	<body>
+		<body style = "background-color: yellowgreen;">
+		<center><form name="cform" id="cform" method="POST">
+			<h1  style= "color: black;"
+                 style= "padding: 20px;"> <center> NutriGeek </center> </h1>
+		<fieldset style="color: black";>
+				<legend> <b> NutriGeek Juice </b> </legend>
+				 <input type="checkbox" id="juice1" name="juice1" value="Calamansi">
+					<label for="juice1"> NutriGeek Calamansi Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>
+					<input type="checkbox" id="juice2" name="juice2" value="Dalandan">
+					<label for="juice2"> NutriGeek Dalandan Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>
+					<input type="checkbox" id="juice3" name="juice3" value="Malunggay">
+					<label for="juice3"> NutriGeek Malunggay Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>
+					<input type="checkbox" id="juice4" name="juice4" value="Dalandan">
+					<label for="juice4"> NutriGeek Watermelon Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>
+					<input type="checkbox" id="juice5" name="juice5" value="Luya">
+					<label for="juice5"> NutriGeek Luya Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+				<input type="submit" value="Add to Order">
+			</fieldset>
+			<br> 
+
+			<fieldset>
+				<legend> <b> NutriGeek Coffee </b></legend>	
+				 <input type="checkbox" id="coffee1" name="coffee1" value="Original">
+					<label for="coffee1"> NutriGeek Original Flavor</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+					<input type="checkbox" id="coffee2" name="coffee2" value="Cappucino">
+					<label for="coffee2"> NutriGeek Cappucino Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+					<input type="checkbox" id="coffee3" name="coffee3" value="Latte">
+					<label for="coffee3"> NutriGeek Latte Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+					<input type="checkbox" id="coffee4" name="coffee4" value="Dark">
+					<label for="coffee4"> NutriGeek Dark Chocolate Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+					<input type="checkbox" id="coffee5" name="coffee5" value="Brown">
+					<label for="coffee5"> NutriGeek Brown Flavor </label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+				<input type="submit" value="Add to Order">
+			</fieldset>
+			<br> 
+			<fieldset>
+				<legend> <b> NutriGeek Vitamins </b> </legend>	
+				 <input type="checkbox" id="vit1" name="vit1" value="Adults">
+					<label for="vit1"> NutriGeek Multivitamins for Adults</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>
+				<input type="checkbox" id="vit2" name="vit2" value="Kids">
+					<label for="vit2"> NutriGeek Multivitamins for Kids</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>  
+				<input type="checkbox" id="vit3" name="vit3" value="Teens">
+					<label for="vit3"> NutriGeek Multivitamins for Teens</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br>  
+				<input type="checkbox" id="vit4" name="vit4" value="Pregnants">
+					<label for="vit4"> NutriGeek Multivitamins for Pregnants</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+				<input type="checkbox" id="vit5" name="vit5" value="Baby">
+					<label for="vit5"> NutriGeek Multivitamins for Baby</label>
+					<label for="qty">(Qty:)</label>
+					<select name="qty" id="qty">
+					  <option value="qty1">1 box</option>
+					  <option value="qty2">2 box</option>
+					  <option value="qty3">3 box</option>
+					  <option value="qty4">4 box</option>
+					  <option value="qty5">5 box</option>
+					</select>
+					<br> 
+				<input type="submit" value="Add to Order">
+			</fieldset> </center>
+		</form>
+			<br> 
+			<center><input type="submit" value="Checkout Orders"> </center>
+{% endblock %}
